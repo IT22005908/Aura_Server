@@ -13,8 +13,8 @@ export class VoiceController {
   @Post()
     postPassVoice(@Body() req:VoiceText):string{  
     
-    //getting the request and pass to voice Service 
-    this.voiceService.execute(req.text);
+    //pass to voice Service 
+    this.voiceService.processVoiceData(req.text);
     //this needed to be implemented later 
     return this.voiceService.getResponse();
     
